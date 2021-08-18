@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+          
+            You are building the new Amazon.
+            This time you are also responsible for the back office.
+            THIS is you CRUD endpoint
+            https://striveschool-api.herokuapp.com/api/product/
+            The product model is 
+            {
+                "_id": "5d318e1a8541744830bef139", //SERVER GENERATED
+                "name": "app test 1",  //REQUIRED
+                "description": "somthing longer", //REQUIRED
+                "brand": "nokia", //REQUIRED
+                "imageUrl": "https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80", //REQUIRED
+                "price": 100, //REQUIRED
+                "userId": "admin", //SERVER GENERATED
+                "createdAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
+                "updatedAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
+                "__v": 0 //SERVER GENERATED
+            }
+            #---------------------------------------------------------------#
+            EVERY REST API CALL SHOULD BE AUTHENTICATED. 
+            Every request to the API should use Token Based Authentication to secure access to the contents.
+            You can get your token by registering on: strive.school/studentlogin
+            Authorization: Bearer ###########
+            Where ######### is the access_token returned by the endpoint.
+            #---------------------------------------------------------------#
+            Today you have to implement:
+            - A backoffice page, where you can insert the product by specifying the parameters
+            - A front page, where the user can see the available products
+            ------ N.B. ------
+            Tokens duration is set to 14 days. Whenever you'll need to obtain a new one you can send the following request:
+            
+            POST https://striveschool-api.herokuapp.com/api/account/login
+            {
+                "username": "testusername@yourmail.com",
+                "password":"pass"
+            }   
+        -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container" id="form-data">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="mb-3">
+          <label for="brand" class="form-label">Brand</label>
+          <input type="text" name="brand" id="brand" />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label"
+            >Description</label
+          >
+          <input type="text" name="description" id="description" />
+        </div>
+        <div class="mb-3">
+          <label for="imageUrl" class="form-label"
+            >Image Url</label
+          >
+          <input type="text" name="imageUrl" id="imageUrl" />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="text" name="price" id="price" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+    <script src="index.js"></script>
+  </body>
+</html>
